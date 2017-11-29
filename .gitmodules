@@ -4,6 +4,7 @@
 [submodule "openembedded-core"]
 	path = openembedded-core
 	url = https://github.com/openembedded/openembedded-core.git
+	branch = rocko
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
