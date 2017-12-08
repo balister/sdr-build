@@ -18,3 +18,19 @@
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
 	branch = morty
+[submodule "meta-arago"]
+	path = meta-arago
+	url = git://arago-project.org/git/meta-arago.git
+	branch = morty
+[submodule "meta-ti"]
+	path = meta-ti
+	url = git://git.yoctoproject.org/meta-ti
+	branch = morty
+[submodule "meta-linaro"]
+	path = meta-linaro
+	url = git://git.linaro.org/openembedded/meta-linaro.git
+	branch = morty
+[submodule "meta-browser"]
+	path = meta-browser
+	url = git://github.com/OSSystems/meta-browser.git
+	branch = morty
