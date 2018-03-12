@@ -14,10 +14,6 @@
 	path = meta-sdr
 	url = https://github.com/balister/meta-sdr.git
 	branch = qt5-test
-[submodule "meta-raspberrypi"]
-	path = meta-raspberrypi
-	url = https://git.yoctoproject.org/git/meta-raspberrypi
-	branch = rocko
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
