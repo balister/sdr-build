@@ -30,7 +30,7 @@ Getting Started
 
 4. Initialize the build system:
 
-    $ TEMPLATECONF=`pwd`/meta-sdr/conf source ./openembedded-core/oe-init-build-env ./buildi-pi ./bitbake
+    $ TEMPLATECONF=`pwd`/conf/pi source ./openembedded-core/oe-init-build-env ./build-pi ./bitbake
 
 5. Select the MACHINE to build for:
 
