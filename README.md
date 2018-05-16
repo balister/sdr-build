@@ -21,7 +21,8 @@ Getting Started
 
 2. Check out the appropriate branch:
 
-    $ git checkout -b rocko-pi origin/rock-pi
+    $ cd sdr-build
+    $ git checkout -b rocko-pi origin/rocko-pi
 
 3. Update the submodules:
 
