@@ -1,4 +1,4 @@
-Repo Manifests for building systems based on meta-sdr
+Building Software Defined Radio (SDR) systems based on meta-sdr
 =============================================
 This repository provides git submodules to setup the OpenEmbedded build system
 with meta-sdr and possibly one or more BSP's (based on the branch you select).
