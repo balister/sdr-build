@@ -26,3 +26,7 @@
 	path = meta-ettus
 	url = https://github.com/balister/meta-ettus-1.git
 	branch = rocko-updates
+[submodule "meta-xilinx"]
+	path = meta-xilinx
+	url = https://github.com/Xilinx/meta-xilinx.git
+	branch = rocko
