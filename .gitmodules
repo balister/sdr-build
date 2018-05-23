@@ -22,3 +22,7 @@
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
 	branch = rocko
+[submodule "meta-ettus"]
+	path = meta-ettus
+	url = https://github.com/balister/meta-ettus-1.git
+	branch = rocko-updates
