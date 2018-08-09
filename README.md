@@ -30,11 +30,11 @@ Getting Started
 
 4. Initialize the build system:
 
-    $ TEMPLATECONF=`pwd`/meta-sdr/conf/conf-e300/ source ./openembedded-core/oe-init-build-env ./build-pi ./bitbake
+    $ TEMPLATECONF=\`pwd\`/meta-sdr/conf/conf-e3xx/ source ./openembedded-core/oe-init-build-env ./build ./bitbake
 
 5. Select the MACHINE to build for:
 
-    $ export MACHINE=ettus-e3xx-sg1
+    $ export MACHINE=ettus-e3xx-sg3   (default from local.conf)
 
 6. Build an image:
 
