@@ -13,7 +13,7 @@
 [submodule "meta-sdr"]
 	path = meta-sdr
 	url = https://github.com/balister/meta-sdr.git
-	branch = rocko-gr-next
+	branch = rocko
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
 	url = https://git.yoctoproject.org/git/meta-raspberrypi
@@ -29,4 +29,8 @@
 [submodule "meta-xilinx"]
 	path = meta-xilinx
 	url = https://github.com/Xilinx/meta-xilinx.git
+	branch = rocko
+[submodule "meta-qt4"]
+	path = meta-qt4
+	url = https://git.yoctoproject.org/git/meta-qt4.git
 	branch = rocko
