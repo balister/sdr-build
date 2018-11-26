@@ -17,4 +17,4 @@
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = https://github.com/balister/meta-qt5.git
-	branch = pyqt5-update
+	branch = master
