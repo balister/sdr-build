@@ -22,3 +22,6 @@
 	path = meta-ti
 	url = https://git.yoctoproject.org/git/meta-ti
 	branch=master
+[submodule "meta-arago"]
+	path = meta-arago
+	url = http://arago-project.org/git/meta-arago.git
