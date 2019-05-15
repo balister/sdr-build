@@ -21,7 +21,7 @@ Getting Started
 
 2. Check out the appropriate branch:
 
-    $ cd sdr-build  
+    $ cd master-odroid  
     $ git checkout -b master-odroid origin/master-odroid
 
 3. Update the submodules:
