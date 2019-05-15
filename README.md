@@ -30,7 +30,7 @@ Getting Started
 
 4. Initialize the build system:
 
-    $ TEMPLATECONF=`pwd`/meta-sdr/conf/conf-odroid source ./openembedded-core/oe-init-build-env ./build-pi ./bitbake
+    $ TEMPLATECONF=\`pwd\`/meta-sdr/conf/conf-odroid source ./openembedded-core/oe-init-build-env ./build-pi ./bitbake
 
 4.1 Review things like DL_DIR in conf/local.conf
 
