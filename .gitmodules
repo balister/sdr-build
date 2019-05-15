@@ -17,7 +17,7 @@
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
-	branch = master
+	branch = master-next
 [submodule "meta-odroid"]
 	path = meta-odroid
 	url = https://github.com/akuster/meta-odroid.git
