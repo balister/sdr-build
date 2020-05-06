@@ -22,7 +22,7 @@ Getting Started
 2. Check out the appropriate branch:
 
     $ cd sdr-build
-    $ git checkout -b master-qemu origin/master-qemu
+    $ git checkout -b dunfell-qemu origin/dunfell-qemu
 
 3. Update the submodules:
 
