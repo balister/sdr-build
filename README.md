@@ -22,7 +22,7 @@ Getting Started
 2. Check out the appropriate branch:
 
     $ cd sdr-build
-    $ git checkout -b dunfell-qemu origin/dunfell-qemu
+    $ git checkout -b dunfell-pi origin/dunfell-pi
 
 3. Update the submodules:
 
@@ -30,11 +30,11 @@ Getting Started
 
 4. Initialize the build system:
 
-    $ TEMPLATECONF=\`pwd\`/meta-sdr/conf/ source ./openembedded-core/oe-init-build-env ./build ./bitbake
+    $ TEMPLATECONF=\`pwd\`/meta-sdr/conf-pi/ source ./openembedded-core/oe-init-build-env ./build ./bitbake
 
 5. Select the MACHINE to build for:
 
-    $ export MACHINE=qemux86-64   (default from local.conf)
+    $ export MACHINE=raspberrypi3-64   (default from local.conf)
 
 6. Build an image:
 
