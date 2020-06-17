@@ -18,3 +18,7 @@
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
 	branch = master
+[submodule "meta-xilinx"]
+	path = meta-xilinx
+	url = https://github.com/Xilinx/meta-xilinx.git
+	branch = rel-v2020.1
