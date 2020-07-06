@@ -22,7 +22,7 @@ Getting Started
 2. Check out the appropriate branch:
 
     $ cd sdr-build
-    $ git checkout -b dunfell-pi origin/zeus-xilinx
+    $ git checkout -b zeus-xilinx origin/zeus-xilinx
 
 3. Update the submodules:
 
