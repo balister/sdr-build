@@ -34,7 +34,7 @@ Getting Started
 
 5. Select the MACHINE to build for:
 
-    $ export MACHINE=zc702-zynq7   (default from local.conf)
+    $ export MACHINE=zcu104-zynqmp   (default from local.conf)
 
 6. Build an image:
 
