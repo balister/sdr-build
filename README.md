@@ -48,4 +48,3 @@ Getting Started
 
     $ bitbake -c populate_sdk gnuradio-dev-image
 
-
