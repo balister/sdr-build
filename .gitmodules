@@ -18,3 +18,7 @@
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
 	branch = dunfell
+[submodule "meta-security"]
+	path = meta-security
+	url = https://git.yoctoproject.org/git/meta-security
+	branch = dunfell
