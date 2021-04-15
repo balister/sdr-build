@@ -22,3 +22,7 @@
 	path = meta-security
 	url = https://git.yoctoproject.org/git/meta-security
 	branch = dunfell
+[submodule "meta-ettus"]
+	path = meta-ettus
+	url = https://github.com/bmagistro/meta-ettus.git
+	branch = dunfell
