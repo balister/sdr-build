@@ -18,3 +18,7 @@
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
 	branch = hardknott
+[submodule "meta-raspberrypi"]
+	path = meta-raspberrypi
+	url = https://git.yoctoproject.org/git/meta-raspberrypi
+	branch = hardknott
