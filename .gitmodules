@@ -21,8 +21,8 @@
 [submodule "meta-xilinx"]
 	path = meta-xilinx
 	url = https://github.com/Xilinx/meta-xilinx.git
-	branch = gatesgarth
+	branch = rel-v2021.2
 [submodule "meta-xilinx-tools"]
 	path = meta-xilinx-tools
 	url = https://github.com/Xilinx/meta-xilinx-tools.git
-	branch = gatesgarth
+	branch = rel-v2021.2
