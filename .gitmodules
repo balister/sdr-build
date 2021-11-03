@@ -13,7 +13,7 @@
 [submodule "meta-sdr"]
 	path = meta-sdr
 	url = https://github.com/balister/meta-sdr.git
-	branch = hardknott
+	branch = hardknott-nn
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
