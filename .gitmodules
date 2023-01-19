@@ -18,3 +18,11 @@
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
 	branch = kirkstone
+[submodule "meta-ti"]
+	path = meta-ti
+	url = https://git.ti.com/git/arago-project/meta-ti.git
+	branch = kirkstone
+[submodule "meta-arm"]
+	path = meta-arm
+	url = https://git.yoctoproject.org/meta-arm
+	branch = kirkstone
