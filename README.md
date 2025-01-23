@@ -22,7 +22,7 @@ Getting Started
 2. Check out the appropriate branch:
 
     $ cd sdr-build
-    $ git checkout -b master-qemu origin/master-qemu
+    $ git checkout -b scarthgap-raspberrypi origin/scarthgap-raspberrypi
 
 3. Update the submodules:
 
@@ -30,11 +30,11 @@ Getting Started
 
 4. Initialize the build system:
 
-    $ TEMPLATECONF=\`pwd\`/meta-sdr/conf/templates/default  source ./openembedded-core/oe-init-build-env ./build ./bitbake
+    $ TEMPLATECONF=\`pwd\`/meta-sdr/conf/templates/pi3  source ./openembedded-core/oe-init-build-env ./build ./bitbake
 
 5. Select the MACHINE to build for:
 
-    $ export MACHINE=qemux86-64   (default from local.conf)
+    $ export MACHINE=raspberrypi4-64   (default from local.conf)
 
 6. Build an image:
 
@@ -42,7 +42,7 @@ Getting Started
 
 7. Build another image:
 
-    $ bitbake gnuradio-demo-image
+    $ bitbake gqrx-demo-image
 
 8. Build and sdk:
 
