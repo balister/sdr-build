@@ -8,8 +8,8 @@ build-job:
     DL_DIR: /cache/downloads
     TMPDIR: /cache/$CI_COMMIT_BRANCH/tmp
   script:
+    - rm -rf build
     - TEMPLATECONF=`pwd`/meta-sdr/conf/templates/default  source ./openembedded-core/oe-init-build-env ./build ./bitbake
-    - rm -f conf/auto.conf
     - echo "DL_DIR = \"$DL_DIR\"" > conf/auto.conf
     - echo "SSTATE_DIR = \"$SSTATE_DIR\"" >> conf/auto.conf
     - echo "TMPDIR = \"$TMPDIR\"" >> conf/auto.conf
