@@ -10,7 +10,7 @@ build-job:
       BB_HASHSERVE: bushey:8686
       CACHE_TMP: /cache/tmp
       DL_DIR: /shared/downloads
-      TMPDIR: $CI_PROJECT_DIR/$CI_COMMIT_BRANCH/tmp
+      TMPDIR: $CACHE_TMP/$CI_COMMIT_BRANCH/tmp
 
   script:
     - rm -rf build
