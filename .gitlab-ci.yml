@@ -2,33 +2,27 @@ image: localhost/local/oebuild
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
+  SSTATE_DIR: /shared/sstate
+  BB_HASHSERVE: bushey:8686
+  CACHE_TMP: /cache/tmp
+  DL_DIR: /shared/downloads
+  TMPDIR: $CACHE_TMP/$CI_COMMIT_BRANCH/tmp
+  MACHINE: qemuarm64
+  TEMPLATE_PATH: /meta-sdr/conf/templates/default
+  IMAGE_NAME: gnuradio-dev-image
 
 build-job:
   stage: build
   variables:
-      SSTATE_DIR: /shared/sstate
-      BB_HASHSERVE: bushey:8686
-      CACHE_TMP: /cache/tmp
-      DL_DIR: /shared/downloads
-      TMPDIR: $CACHE_TMP/$CI_COMMIT_BRANCH/tmp
 
   script:
     - rm -rf build
-    - TEMPLATECONF=`pwd`/meta-sdr/conf/templates/default  source ./openembedded-core/oe-init-build-env ./build ./bitbake
+    - TEMPLATECONF=`pwd`$TEMPLATE_PATH  source ./openembedded-core/oe-init-build-env ./build ./bitbake
     - echo "DL_DIR = \"$DL_DIR\"" > conf/auto.conf
     - echo "SSTATE_DIR = \"$SSTATE_DIR\"" >> conf/auto.conf
     - echo "BB_HASHSERVE = \"$BB_HASHSERVE\"" >> conf/auto.conf
     - echo "TMPDIR = \"$TMPDIR\"" >> conf/auto.conf
+    - echo "MACHINE = \"$MACHINE\"" >> conf/auto.conf
     - cat conf/auto.conf
-    - bitbake gnuradio-dev-image
+    - bitbake $IMAGE_NAME
 
-test-job1:
-  stage: test
-  script:
-    - echo "This job tests something"
-
-deploy-prod:
-  stage: deploy
-  script:
-    - echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
-  environment: production
