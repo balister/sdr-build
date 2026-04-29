@@ -12,4 +12,4 @@ build-job:
     - echo "MACHINE = \"$MACHINE\"" >> conf/auto.conf
     - cat conf/auto.conf
     - bitbake $IMAGE_NAME
-
+    - rsync -a $TMPDIR/deploy/images/$MACHINE balister@bushey:opensdr/oe-shared/
