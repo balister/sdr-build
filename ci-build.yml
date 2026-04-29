@@ -1,0 +1,15 @@
+build-job:
+  stage: build
+  variables:
+
+  script:
+    - rm -rf build
+    - TEMPLATECONF=`pwd`$TEMPLATE_PATH  source ./openembedded-core/oe-init-build-env ./build ./bitbake
+    - echo "DL_DIR = \"$DL_DIR\"" > conf/auto.conf
+    - echo "SSTATE_DIR = \"$SSTATE_DIR\"" >> conf/auto.conf
+    - echo "BB_HASHSERVE = \"$BB_HASHSERVE\"" >> conf/auto.conf
+    - echo "TMPDIR = \"$TMPDIR\"" >> conf/auto.conf
+    - echo "MACHINE = \"$MACHINE\"" >> conf/auto.conf
+    - cat conf/auto.conf
+    - bitbake $IMAGE_NAME
+
