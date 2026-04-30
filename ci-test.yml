@@ -1,0 +1,28 @@
+test-job1:
+
+  variables:
+
+  stage: test
+
+  before_script:
+    - source /home/oebuilds/labgrid-venv/bin/activate
+    - labgrid-client -x 192.168.11.221 -p $PLACE acquire
+
+  script:
+    - mkdir -p $CACHE_TMP
+    - rsync -a balister@bushey:opensdr/oe-shared/$MACHINE $CACHE_TMP
+    - source /home/oebuilds/labgrid-venv/bin/activate
+    - cd meta-sdr/contrib/labgrid
+    - ls
+    - pwd
+    - mkdir -p images
+    - cp $CACHE_TMP/$MACHINE/$IMAGE_OUTPUT.bz2 images/image.wic.bz2
+    - cp $CACHE_TMP/$MACHINE/$IMAGE_OUTPUT.bmap images/image.wic.bmap
+    - pytest --lg-coordinator=192.168.11.221 --lg-env $PLACE_CONFIG test_ptest.py
+
+  after_script:
+    - source /home/oebuilds/labgrid-venv/bin/activate
+    - labgrid-client -x 192.168.11.221 -p $PLACE power off
+    - labgrid-client -x 192.168.11.221 -p $PLACE release
+
+
