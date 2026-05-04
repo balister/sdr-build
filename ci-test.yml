@@ -1,6 +1,7 @@
-test-job1:
+labgrid-tests:
 
   variables:
+    CI_DEBUG_TRACE: "true"
 
   stage: test
 
