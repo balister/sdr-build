@@ -13,4 +13,5 @@ build-job:
     - cat conf/auto.conf
     - bitbake $IMAGE_NAME
     - bitbake gnuradio4-image
+    - bitbake gnuradio4-pest-image
     - rsync -a $TMPDIR/deploy/images/$MACHINE balister@bushey:opensdr/oe-shared/
