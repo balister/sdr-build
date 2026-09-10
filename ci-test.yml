@@ -1,7 +1,7 @@
 labgrid-tests:
 
   variables:
-    CI_DEBUG_TRACE: "true"
+#    CI_DEBUG_TRACE: "true"
 
   stage: test
 
