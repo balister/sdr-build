@@ -22,7 +22,7 @@ Getting Started
 2. Check out the appropriate branch:
 
     $ cd sdr-build
-    $ git checkout -b master-qemu origin/master-qemu
+    $ git checkout -b master-beaglev-fire origin/master-beaglev-fire
 
 3. Update the submodules:
 
@@ -30,19 +30,19 @@ Getting Started
 
 4. Initialize the build system:
 
-    $ TEMPLATECONF=\`pwd\`/meta-sdr/conf/templates/default  source ./openembedded-core/oe-init-build-env ./build ./bitbake
+    $ TEMPLATECONF=\`pwd\`/meta-sdr/conf/templates/beaglev-fire  source ./openembedded-core/oe-init-build-env ./build ./bitbake
 
 5. Select the MACHINE to build for:
 
-    $ export MACHINE=qemux86-64   (default from local.conf)
+    $ export MACHINE=beaglev-fire   (default from local.conf)
 
 6. Build an image:
 
-    $ bitbake gnuradio-dev-image
+    $ bitbake gnuradio4-ptest-image
 
-7. Build another image:
+7. Write the image to an SD card (replace /dev/sdX with your card):
 
-    $ bitbake gnuradio-demo-image
+    $ bmaptool copy tmp/deploy/images/beaglev-fire/gnuradio4-ptest-image-beaglev-fire.rootfs.wic.gz /dev/sdX
 
 8. Build and sdk:
 
