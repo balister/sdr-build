@@ -4,7 +4,7 @@ description: Boot a bitbake-built qemu image (default gnuradio4-ptest-image on M
 ---
 
 This is a Yocto/OpenEmbedded build tree (submodules: bitbake, openembedded-core,
-meta-openembedded, meta-sdr, meta-qt5; build output in `build/`, gitignored). The
+meta-openembedded, meta-sdr, meta-qt6; build output in `build/`, gitignored). The
 driven artifact is a `bitbake`-built qemu image already sitting in
 `build/tmp/deploy/images/<machine>/`. Drive it via
 `.claude/skills/run-qemu-ptest/driver.sh` — it boots the image in a detached tmux
