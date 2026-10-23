@@ -123,13 +123,13 @@ cd build && runqemu tmp/deploy/images/qemuarm64/gnuradio4-ptest-image-qemuarm64.
 Opens the normal graphical QEMU window with a login prompt (root, no password).
 `Ctrl-A X` or close the window to quit.
 
-## Test — last verified results (qemuarm64, 2026-10-19; gnuradio-ptest-image 2026-10-13)
+## Test — last verified results (qemuarm64, 2026-10-23; gnuradio-ptest-image 2026-10-13)
 
 | image | package | result | runtime |
 |---|---|---|---|
 | gnuradio-ptest-image | gnuradio | 255 pass, 0 fail | ~16 min (956–992 s) |
 | gnuradio4-ptest-image | gnuradio4-core | 47 pass, or 46 + 1 flake (`qa_thread_pool` / `qa_SchedulerLifecycle`) | ~50–80 s |
-| gnuradio4-ptest-image | gnuradio4-blocks | 147 pass, incl. the algorithm library's `library/algorithm/test/qa_*` (gnuradio4-library merged into blocks) | ~370 s |
+| gnuradio4-ptest-image | gnuradio4-blocks | 153 pass, incl. the algorithm library's `library/algorithm/test/qa_*` and `examples/test/qa_ExampleGraphs` | ~370 s |
 | gnuradio4-ptest-image | gnuradio4-control-plane | 4 pass (its gtest suites: 1 + 66 + 93 + 7 `[  PASSED  ]`) | ~45 s |
 | gnuradio4-ptest-image | gnuradio4-studio-blocks | 5 pass | ~2 s |
 
@@ -155,7 +155,7 @@ Known noise, not regressions:
   `DISABLE_SENSITIVE_TESTS`, not ptest failures.
 - `qa_DataSink` in `gnuradio4-blocks` segfaulted deterministically with
   gnuradio4-core b85fa75 + blocks df6af22 (core's end-of-stream bound ending
-  `testing::Delay` mid-wait). Passes with core b31d454 + blocks 212952a; if it
+  `testing::Delay` mid-wait). Passes with core 83d15cc + blocks 8f588c0; if it
   segfaults again after a bump, that's the same interaction.
 - Core 7f43a66+ refuses graph parameters a block doesn't declare (`declares no
   setting named '...'; the nearest are ...`). Control-plane needs meta-sdr's
