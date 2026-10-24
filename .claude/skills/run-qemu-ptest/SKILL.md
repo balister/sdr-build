@@ -123,7 +123,7 @@ cd build && runqemu tmp/deploy/images/qemuarm64/gnuradio4-ptest-image-qemuarm64.
 Opens the normal graphical QEMU window with a login prompt (root, no password).
 `Ctrl-A X` or close the window to quit.
 
-## Test — last verified results (qemuarm64, 2026-10-23; gnuradio-ptest-image 2026-10-24)
+## Test — last verified results (qemuarm64, 2026-10-24)
 
 | image | package | result | runtime |
 |---|---|---|---|
