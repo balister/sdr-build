@@ -123,11 +123,11 @@ cd build && runqemu tmp/deploy/images/qemuarm64/gnuradio4-ptest-image-qemuarm64.
 Opens the normal graphical QEMU window with a login prompt (root, no password).
 `Ctrl-A X` or close the window to quit.
 
-## Test — last verified results (qemuarm64, 2026-10-23; gnuradio-ptest-image 2026-10-13)
+## Test — last verified results (qemuarm64, 2026-10-23; gnuradio-ptest-image 2026-10-24)
 
 | image | package | result | runtime |
 |---|---|---|---|
-| gnuradio-ptest-image | gnuradio | 255 pass, 0 fail | ~16 min (956–992 s) |
+| gnuradio-ptest-image | gnuradio | 257 pass, 0 fail | ~16–18 min (956–1094 s) |
 | gnuradio4-ptest-image | gnuradio4-core | 47 pass, or 46 + 1 flake (`qa_thread_pool` / `qa_SchedulerLifecycle`) | ~50–80 s |
 | gnuradio4-ptest-image | gnuradio4-blocks | 153 pass, incl. the algorithm library's `library/algorithm/test/qa_*` and `examples/test/qa_ExampleGraphs` | ~370 s |
 | gnuradio4-ptest-image | gnuradio4-control-plane | 4 pass (its gtest suites: 1 + 66 + 93 + 7 `[  PASSED  ]`) | ~45 s |
