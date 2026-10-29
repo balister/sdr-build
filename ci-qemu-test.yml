@@ -1,0 +1,29 @@
+# Boot the ptest images under QEMU (TCG, slirp networking) and run
+# ptest-runner on them through OE's testimage class. The images come out
+# of sstate, since build-job already built them.
+qemu-ptest:
+  stage: test
+  timeout: 2h
+
+  script:
+    - !reference [.bitbake-env, script]
+    - echo 'IMAGE_CLASSES += "testimage"' >> conf/auto.conf
+    - echo 'TEST_SUITES = "ping ssh ptest"' >> conf/auto.conf
+    - echo 'TEST_RUNQEMUPARAMS = "slirp nographic"' >> conf/auto.conf
+    # The default 256M gets the gnuradio4-blocks tests OOM-killed.
+    - echo 'QB_MEM = "-m 2048"' >> conf/auto.conf
+    # ptest-runner's limit per package; the gnuradio ptests take ~17 min under TCG.
+    - echo 'PTEST_RUNNER_TIMEOUT = "1800"' >> conf/auto.conf
+    # Keep the logs inside the checkout so they can be saved as artifacts.
+    - echo 'TEST_LOG_DIR = "${TOPDIR}/testimage/${PN}"' >> conf/auto.conf
+    - cat conf/auto.conf
+    - bitbake gnuradio4-ptest-image gnuradio-ptest-image
+    # One at a time: testimage takes no lock for qemu targets.
+    - bitbake -c testimage gnuradio4-ptest-image
+    - bitbake -c testimage gnuradio-ptest-image
+
+  artifacts:
+    when: always
+    expire_in: 1 month
+    paths:
+      - build/testimage/

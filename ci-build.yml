@@ -1,7 +1,4 @@
-build-job:
-  stage: build
-  variables:
-
+.bitbake-env:
   script:
     - rm -rf build
     - TEMPLATECONF=`pwd`$TEMPLATE_PATH  source ./openembedded-core/oe-init-build-env ./build ./bitbake
@@ -10,8 +7,16 @@ build-job:
     - echo "BB_HASHSERVE = \"$BB_HASHSERVE\"" >> conf/auto.conf
     - echo "TMPDIR = \"$TMPDIR\"" >> conf/auto.conf
     - echo "MACHINE = \"$MACHINE\"" >> conf/auto.conf
+
+build-job:
+  stage: build
+  variables:
+
+  script:
+    - !reference [.bitbake-env, script]
     - cat conf/auto.conf
     - bitbake $IMAGE_NAME
     - bitbake gnuradio4-image
     - bitbake gnuradio4-ptest-image
+    - bitbake gnuradio-ptest-image
     - rsync -a $TMPDIR/deploy/images/$MACHINE balister@bushey:opensdr/oe-shared/
