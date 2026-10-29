@@ -11,7 +11,7 @@ qemu-ptest:
     - echo 'TEST_SUITES = "ping ssh ptest"' >> conf/auto.conf
     - echo 'TEST_RUNQEMUPARAMS = "slirp nographic"' >> conf/auto.conf
     # The default 256M gets the gnuradio4-blocks tests OOM-killed.
-    - echo 'QB_MEM = "-m 2048"' >> conf/auto.conf
+    - echo 'QB_MEM = "-m 4096"' >> conf/auto.conf
     # ptest-runner's limit per package; the gnuradio ptests take ~17 min under TCG.
     - echo 'PTEST_RUNNER_TIMEOUT = "1800"' >> conf/auto.conf
     # Keep the logs inside the checkout so they can be saved as artifacts.
