@@ -5,6 +5,10 @@ qemu-ptest:
   stage: test
   timeout: 2h
 
+  before_script:
+    # 2. Tell Git to trust the GitLab runner's workspace directory
+    - git config --global --add safe.directory "$CI_PROJECT_DIR"
+
   script:
     - !reference [.bitbake-env, script]
     - echo 'IMAGE_CLASSES += "testimage"' >> conf/auto.conf
