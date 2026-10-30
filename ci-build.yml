@@ -19,4 +19,4 @@ build-job:
     - bitbake gnuradio4-image
     - bitbake gnuradio4-ptest-image
     - bitbake gnuradio-ptest-image
-    - rsync -a $TMPDIR/deploy/images/$MACHINE balister@bushey:opensdr/oe-shared/
+    - rsync -a --del $TMPDIR/deploy/images/$MACHINE balister@bushey:opensdr/oe-shared/
