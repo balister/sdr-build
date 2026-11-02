@@ -3,3 +3,4 @@ image: localhost/local/oebuild
 include:
   - ci-variables.yml
   - ci-build.yml
+  - ci-qemu-test.yml

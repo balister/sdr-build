@@ -14,10 +14,10 @@
 	path = meta-sdr
 	url = https://github.com/balister/meta-sdr.git
 	branch = master
-[submodule "meta-qt5"]
-	path = meta-qt5
-	url = https://github.com/meta-qt5/meta-qt5.git
-	branch = master
+[submodule "meta-qt6"]
+	path = meta-qt6
+	url = https://code.qt.io/yocto/meta-qt6.git
+	branch = dev
 [submodule "meta-riscv"]
 	path = meta-riscv
 	url = https://github.com/riscv/meta-riscv.git
