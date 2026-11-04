@@ -15,8 +15,5 @@ build-job:
   script:
     - !reference [.bitbake-env, script]
     - cat conf/auto.conf
-    - bitbake $IMAGE_NAME
-    - bitbake gnuradio4-image
-    - bitbake gnuradio4-ptest-image
-    - bitbake gnuradio-ptest-image
+    - bitbake $BUILD_IMAGES $TEST_IMAGES
     - rsync -a --del $TMPDIR/deploy/images/$MACHINE balister@bushey:opensdr/oe-shared/

@@ -8,8 +8,11 @@ variables:
   TMPDIR: $CACHE_TMP/$CI_COMMIT_BRANCH/tmp
   MACHINE: qemuarm64
   TEMPLATE_PATH: /meta-sdr/conf/templates/default
+# Images that are only built
+  BUILD_IMAGES: gnuradio-dev-image gnuradio4-image
+# Images that are built, and then tested in the test stage
+  TEST_IMAGES: gnuradio4-ptest-image gnuradio-ptest-image
 # Variables for test part of CI
-  IMAGE_NAME: gnuradio-dev-image
   IMAGE_OUTPUT: gnuradio-ptest-image-raspberrypi5.rootfs.wic
   PLACE: pi5
   PLACE_CONFIG: pi5.yaml
