@@ -13,6 +13,5 @@ variables:
 # Images that are built, and then tested in the test stage
   TEST_IMAGES: gnuradio4-ptest-image gnuradio-ptest-image
 # Variables for test part of CI
-  IMAGE_OUTPUT: gnuradio-ptest-image-raspberrypi5.rootfs.wic
   PLACE: pi5
   PLACE_CONFIG: pi5.yaml
