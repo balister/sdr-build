@@ -21,10 +21,9 @@ qemu-ptest:
     # Keep the logs inside the checkout so they can be saved as artifacts.
     - echo 'TEST_LOG_DIR = "${TOPDIR}/testimage/${PN}"' >> conf/auto.conf
     - cat conf/auto.conf
-    - bitbake gnuradio4-ptest-image gnuradio-ptest-image
+    - bitbake $TEST_IMAGES
     # One at a time: testimage takes no lock for qemu targets.
-    - bitbake -c testimage gnuradio4-ptest-image
-    - bitbake -c testimage gnuradio-ptest-image
+    - for image in $TEST_IMAGES; do bitbake -c testimage $image || exit 1; done
 
   artifacts:
     when: always
