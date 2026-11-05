@@ -7,7 +7,7 @@ variables:
   DL_DIR: /shared/downloads
   TMPDIR: $CACHE_TMP/$CI_COMMIT_BRANCH/tmp
   MACHINE: beaglev-fire
-  TEMPLATE_PATH: /meta-sdr/conf/templates/default
+  TEMPLATE_PATH: /meta-sdr/conf/templates/beaglev-fire
 # Images that are only built
   BUILD_IMAGES: gnuradio-dev-image gnuradio4-image
 # Images that are built, and then tested in the test stage
