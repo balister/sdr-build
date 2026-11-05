@@ -24,7 +24,7 @@ labgrid-tests:
       for image in $TEST_IMAGES; do
         echo "=== $image"
         output=$CACHE_TMP/$MACHINE/$image-$MACHINE.rootfs.wic
-        cp $output.bz2 images/image.wic.bz2
+        cp $output.$IMAGE_COMPRESSION images/image.wic.$IMAGE_COMPRESSION
         cp $output.bmap images/image.wic.bmap
         pytest --lg-coordinator=192.168.11.221 --lg-env $PLACE_CONFIG test_ptest.py || failed="$failed $image"
       done

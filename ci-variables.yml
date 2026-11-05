@@ -15,3 +15,6 @@ variables:
 # Variables for test part of CI
   PLACE: pi5
   PLACE_CONFIG: pi5.yaml
+# Compression suffix of the wic image the board's labgrid config flashes
+# (bz2 for pi5.yaml, gz for beaglev-fire.yaml)
+  IMAGE_COMPRESSION: bz2
