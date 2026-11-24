@@ -7,6 +7,9 @@
     - echo "BB_HASHSERVE = \"$BB_HASHSERVE\"" >> conf/auto.conf
     - echo "TMPDIR = \"$TMPDIR\"" >> conf/auto.conf
     - echo "MACHINE = \"$MACHINE\"" >> conf/auto.conf
+    # Don't start new tasks while the builder is short of memory; the
+    # gnuradio4 test compiles take up to 7.4 GB each.
+    - echo "BB_PRESSURE_MAX_MEMORY = \"15000\"" >> conf/auto.conf
 
 build-job:
   stage: build
